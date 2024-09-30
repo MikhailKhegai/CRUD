@@ -15,7 +15,6 @@ class ProductViewSet(ModelViewSet):
     search_fields = ['description']
 
 
-
 class StockViewSet(ModelViewSet):
     queryset = Stock.objects.all()
     serializer_class = StockSerializer
