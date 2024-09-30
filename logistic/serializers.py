@@ -10,7 +10,6 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'description']
 
 
-
 class ProductPositionSerializer(serializers.ModelSerializer):
     # настройте сериализатор для позиции продукта на складе
     class Meta:
@@ -39,8 +38,6 @@ class StockSerializer(serializers.ModelSerializer):
         # с помощью списка positions
         for position in positions:
             StockProduct.objects.update_or_create(stock=stock, **position)
-
-
 
         return stock
 
